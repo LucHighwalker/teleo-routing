@@ -42,7 +42,7 @@ class BinaryTreeNode(object):
 
 
 class BinarySearchTree(object):
-    """Modified to take in tuples using the value [0] as the ordering value"""
+    """Modified to take in tuples using the value [0] as the ordering value, will also return node if search query is inside key value"""
 
     def __init__(self, items=None):
         """Initialize this binary search tree and insert the given items."""
@@ -137,7 +137,7 @@ class BinarySearchTree(object):
             # Not found (base case)
             return None
         # TODO: Check if the given item matches the node's data
-        elif item[0] == node.data[0]:
+        elif item[0] in node.data[0]:
             # Return the found node
             return node
         # TODO: Check if the given item is less than the node's data
